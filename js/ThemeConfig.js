@@ -24,7 +24,7 @@ var modalHintItems = [
 ]
 
 var settingsDefaults = {
-    layoutMode: 1,
+    layoutMode: 0,
     sortMode: 0,
     bgBlur: 18,
     bgDark: 0.35,

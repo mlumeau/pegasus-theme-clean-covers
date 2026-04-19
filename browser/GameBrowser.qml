@@ -6,7 +6,7 @@ import "../ui" as UI
 Item {
     id: root
 
-    property int layoutMode: 1
+    property int layoutMode: 0
     property bool showHints: true
     property bool gameListScrollbarEnabled: true
     property var gamesModel
