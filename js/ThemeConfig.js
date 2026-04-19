@@ -14,6 +14,7 @@ var controllerHintItems = [
     { icon: "../assets/controller/face-east.svg", label: "Back" },
     { icon: "../assets/controller/face-west.svg", label: "Sort" },
     { icon: "../assets/controller/face-north.svg", label: "Options" },
+    { icons: ["../assets/controller/lb.svg", "../assets/controller/rb.svg"], label: "Collections" },
     { icons: ["../assets/controller/dpad.svg", "../assets/controller/left-stick.svg"], label: "Navigate" }
 ]
 

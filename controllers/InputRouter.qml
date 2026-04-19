@@ -10,6 +10,7 @@ Item {
     signal closeOptionsRequested()
     signal toggleOptionsRequested()
     signal cycleSortRequested()
+    signal cycleCollectionRequested(int step)
     signal optionMoveRequested(int step)
     signal optionAdjustRequested(int step)
     signal selectionMoveRequested(int dx, int dy)
@@ -36,6 +37,18 @@ Item {
         if (event.key === Qt.Key_X || api.keys.isDetails(event)) {
             event.accepted = true
             cycleSortRequested()
+            return
+        }
+
+        if (!optionsOpen && api.keys.isPrevPage(event)) {
+            event.accepted = true
+            cycleCollectionRequested(-1)
+            return
+        }
+
+        if (!optionsOpen && api.keys.isNextPage(event)) {
+            event.accepted = true
+            cycleCollectionRequested(1)
             return
         }
 

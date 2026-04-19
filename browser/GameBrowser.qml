@@ -10,6 +10,7 @@ Item {
     property bool showHints: true
     property bool gameListScrollbarEnabled: true
     property var gamesModel
+    property string collectionName: "All games"
     property color bgFallbackColor: "#2a2d32"
 
     property color colorTextPrimary: "white"
@@ -107,6 +108,7 @@ Item {
             textColor: colorTextSort
             fontFamily: root.sansFontFamily
             textPixelSize: Math.round(root.height * 0.018)
+            prefixText: root.collectionName + "  •"
             valueText: ThemeSort.displayName(sortMode, sortAscending)
             iconSource: ThemeSort.iconSource(sortMode)
             iconScale: ThemeSort.iconScale(sortMode)

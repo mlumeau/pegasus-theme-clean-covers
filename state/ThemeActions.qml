@@ -9,6 +9,7 @@ QtObject {
     property var state
     property var browser
     property var audio
+    property var collections
     property var launchController
     property var motionController
     property var memory
@@ -37,6 +38,20 @@ QtObject {
         setCurrentIndex(0)
         audio.playSort()
         saveSettings()
+    }
+
+    function cycleCollection(step) {
+        if (!collections)
+            return
+
+        var nextIndex = collections.nextBrowsableIndex(step)
+        if (nextIndex === collections.activeIndex)
+            return
+
+        collections.activeIndex = nextIndex
+        browser.resetIndexes()
+        audio.playNav()
+        motionController.restart()
     }
 
     function cycleLayout(step) {

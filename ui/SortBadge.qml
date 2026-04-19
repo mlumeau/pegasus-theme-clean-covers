@@ -5,6 +5,7 @@ Item {
     property color textColor: "#92ffffff"
     property string fontFamily: ""
     property real textPixelSize: 16
+    property string prefixText: ""
     property string labelText: "Sorted by:"
     property string valueText: ""
     property string iconSource: ""
@@ -26,6 +27,14 @@ Item {
     Row {
         id: badgeRow
         spacing: 16
+
+        Text {
+            visible: prefixText !== ""
+            text: prefixText
+            color: textColor
+            font.family: fontFamily
+            font.pixelSize: textPixelSize
+        }
 
         Text {
             text: labelText

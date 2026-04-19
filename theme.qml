@@ -23,6 +23,12 @@ FocusScope {
         enabled: state.soundEnabled
     }
 
+    State.ThemeCollections {
+        id: collections
+        allGamesModel: api.allGames
+        collectionsModel: api.collections
+    }
+
     Controllers.BackgroundMotionController {
         id: motionController
         stage: backgroundStage
@@ -31,7 +37,7 @@ FocusScope {
 
     Browser.SortedGamesModel {
         id: sortedGames
-        sourceGamesModel: api.allGames
+        sourceGamesModel: collections.currentGamesModel
         sortMode: state.sortMode
         sortAscending: state.sortAscending
     }
@@ -60,6 +66,7 @@ FocusScope {
         state: state
         browser: browser
         audio: audio
+        collections: collections
         launchController: launchController
         motionController: motionController
         memory: api.memory
@@ -110,6 +117,7 @@ FocusScope {
         showHints: state.showHints
         gameListScrollbarEnabled: state.gameListScrollbarEnabled
         gamesModel: sortedGames
+        collectionName: collections.currentName
         bgFallbackColor: state.bgFallbackColor
         colorTextPrimary: palette.textPrimary
         colorTextSecondary: palette.textSecondary
@@ -171,6 +179,7 @@ FocusScope {
                 optionsController.openMenu()
         }
         onCycleSortRequested: actions.cycleSort(1)
+        onCycleCollectionRequested: actions.cycleCollection(step)
         onOptionMoveRequested: optionsController.moveCurrent(step)
         onOptionAdjustRequested: optionsController.adjustCurrent(step)
         onSelectionMoveRequested: actions.moveSelection(dx, dy, optionsController.open)
