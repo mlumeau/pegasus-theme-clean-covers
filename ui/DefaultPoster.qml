@@ -18,7 +18,7 @@ Item {
 
     Image {
         anchors.fill: parent
-        source: "assets/theme/default-poster.svg"
+        source: "../assets/theme/default-poster.svg"
         fillMode: Image.PreserveAspectCrop
         asynchronous: true
         smooth: true

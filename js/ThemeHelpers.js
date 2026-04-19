@@ -21,43 +21,6 @@ function randDifferent(start, minV, maxV, minDelta) {
     return clamp(start - dir * minDelta, minV, maxV)
 }
 
-function sortIconSource(sortMode) {
-    switch (sortMode) {
-        case 0: return "assets/sort/last-played.svg"
-        case 1: return "assets/sort/title.svg"
-        case 2: return "assets/sort/release-year.svg"
-        case 3: return "assets/sort/play-count.svg"
-        case 4: return "assets/sort/play-time.svg"
-        default: return "assets/sort/last-played.svg"
-    }
-}
-
-function defaultSortAscendingForMode(mode) {
-    return mode === 1
-}
-
-function sortDisplayName(sortMode, sortAscending, sortNames) {
-    switch (sortMode) {
-        case 0: return "Last played - " + (sortAscending ? "asc." : "desc.")
-        case 1: return "Title - " + (sortAscending ? "A-Z" : "Z-A")
-        case 2: return "Release year - " + (sortAscending ? "asc." : "desc.")
-        case 3: return "Play count - " + (sortAscending ? "asc." : "desc.")
-        case 4: return "Play time - " + (sortAscending ? "asc." : "desc.")
-        default: return sortNames[sortMode]
-    }
-}
-
-function sortIconScale(sortMode) {
-    switch (sortMode) {
-        case 0: return 0.94
-        case 1: return 1.08
-        case 2: return 0.92
-        case 3: return 1.06
-        case 4: return 1.0
-        default: return 1.0
-    }
-}
-
 function fallbackColorName(currentColor, fallbackColors) {
     var current = currentColor.toString()
     for (var i = 0; i < fallbackColors.length; ++i) {

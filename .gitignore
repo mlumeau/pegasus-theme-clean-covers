@@ -1,1 +1,18 @@
+# Local agent/editor state
 .codex
+.vscode/
+.idea/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor temp files
+*~
+*.swp
+*.swo
+
+# Local logs and temp files
+*.log
+*.tmp
+*.temp

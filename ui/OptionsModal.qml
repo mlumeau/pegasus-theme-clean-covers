@@ -307,7 +307,7 @@ Item {
                     spacing: 12
 
                     Image {
-                        source: "assets/controller/face-east.svg"
+                        source: "../assets/controller/face-east.svg"
                         width: Math.round(rootHeight * 0.024)
                         height: width
                         fillMode: Image.PreserveAspectFit
