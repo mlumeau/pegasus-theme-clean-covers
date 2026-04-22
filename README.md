@@ -2,6 +2,12 @@
 
 Simple [Pegasus Frontend](https://pegasus-frontend.org/) theme focused on cover art, blurred backdrops, and clean browsing for a laid-back gaming experience.
 
+## Screenshots
+
+![Clean Covers screenshot 1](screenshots/screenshot1.webp)
+![Clean Covers screenshot 2](screenshots/screenshot2.webp)
+![Clean Covers screenshot 3](screenshots/screenshot3.webp)
+
 ## Features
 
 - Row and grid layouts
