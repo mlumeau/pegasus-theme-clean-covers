@@ -40,31 +40,6 @@ Column {
     }
 
     Item {
-        width: parent.width * 0.74
-        height: secondaryItem.height
-
-        DropShadow {
-            anchors.fill: secondaryItem
-            source: secondaryItem
-            horizontalOffset: 0
-            verticalOffset: 2
-            radius: 5
-            samples: 11
-            color: "#48000000"
-        }
-
-        Text {
-            id: secondaryItem
-            text: parent.parent.secondaryValue
-            color: parent.parent.secondaryColor
-            font.family: parent.parent.sansFontFamily
-            font.pixelSize: Math.round(parent.parent.rootHeight * 0.022)
-            elide: Text.ElideRight
-            width: parent.width
-        }
-    }
-
-    Item {
         width: parent.width * 0.9
         height: metaItem.height
 
@@ -87,6 +62,31 @@ Column {
             elide: Text.ElideRight
             width: parent.width
             height: Math.round(parent.parent.rootHeight * 0.024)
+        }
+    }
+
+    Item {
+        width: parent.width * 0.74
+        height: secondaryItem.height
+        
+        DropShadow {
+            anchors.fill: secondaryItem
+            source: secondaryItem
+            horizontalOffset: 0
+            verticalOffset: 2
+            radius: 5
+            samples: 11
+            color: "#48000000"
+        }
+
+        Text {
+            id: secondaryItem
+            text: parent.parent.secondaryValue
+            color: parent.parent.secondaryColor
+            font.family: parent.parent.sansFontFamily
+            font.pixelSize: Math.round(parent.parent.rootHeight * 0.022)
+            elide: Text.ElideRight
+            width: parent.width
         }
     }
 }
